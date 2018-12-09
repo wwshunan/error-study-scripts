@@ -2,6 +2,7 @@
 #PBS -N wws
 #PBS -r n
 #PBS -q batch
+#PBS -t 1-100
 #PBS -l walltime=2880:00:00 
 
 if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
