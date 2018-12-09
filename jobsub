@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -N wws
+#PBS -r n
+#PBS -q batch
+#PBS -l walltime=2880:00:00 
+
+if [ -n "$PBS_O_WORKDIR" ]; then cd $PBS_O_WORKDIR; fi
+
+bash ./run.sh ${PBS_ARRAYID}
+
